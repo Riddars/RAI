@@ -1,246 +1,236 @@
 
+
+# 🧪 Dataset: **Chelate Complexes – Thermodynamic Stability of Metal–Ligand Complexes**
+
 ---
 
-# 🧪 Датасет: **Chelate Complexes – Thermodynamic Stability of Metal–Ligand Complexes**
-
----
-
-## 🔷 **Основные поля Responsible AI (RAI)**
+## 🔷 **Core Responsible AI (RAI) Fields**
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были вручную извлечены из научных публикаций. Извлекались структурные представления лигандов в формате канонического SMILES, тип металла, а также значения термодинамической стабильности (lgK). Каждое значение связано с определённым источником и страницей публикации. Структуры были стандартизированы с помощью RDKit.  
-☑️ Подтверждено в *Original Data*, *Dataset Description*, *Key Notes*
+The data was manually extracted from scientific publications. Extracted elements include ligand structures in canonical SMILES format, metal type, and thermodynamic stability values (lgK). Each value is linked to a specific source and page within the publication. All structures were standardized using RDKit.  
+☑️ Confirmed in *Original Data*, *Dataset Description*, *Key Notes*
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные источники искажений:
-- Только 4 типа металлов (Ga, Gd, Tc, Lu);
-- Исключены полимеры, биомолекулы, нестандартные радикалы и неопределенные структуры;
-- Использованы только публикации, где данные полностью соответствовали критериям отбора.
+Potential sources of bias:
+- Only 4 metal types are represented: Ga, Gd, Tc, Lu;  
+- Polymers, biomolecules, nonstandard radicals, and undefined structures were excluded;  
+- Only publications that fully matched the selection criteria were used.
 
-🟡 **[Информация о шагах по снижению предвзятости не предоставлена]**
+🟡 **[No information provided on bias mitigation efforts]**
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-Датасет не содержит персональных или чувствительных данных. Вся информация представляет собой обезличенные химические и экспериментальные параметры, извлечённые из опубликованных научных источников.  
-☑️ Подтверждено по содержанию полей и структуре данных
+The dataset contains no personal or sensitive information. All data consists of depersonalized chemical and experimental parameters extracted from published scientific sources.  
+☑️ Confirmed based on field content and data structure
 
 ---
 
 ### `rai:dataLimitations`
 
-- Ограничено четырьмя металлами: Ga, Gd, Tc, Lu;  
-- Стереохимия удалена;  
-- Не включены связи с биомолекулами, произвольными радикалами, а также структурные прекурсоры;  
-- Предназначен только для **in vitro / теоретического анализа**, не содержит биологических или фармакокинетических данных.
+- Limited to four metals: Ga, Gd, Tc, Lu;  
+- Stereochemistry was removed;  
+- No inclusion of biomolecular interactions, arbitrary radicals, or structural precursors;  
+- Intended solely for **in vitro / theoretical analysis**, with no biological or pharmacokinetic data.
 
-☑️ Подтверждено в *Key Notes* и *Restrictions*
+☑️ Confirmed in *Key Notes* and *Restrictions*
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
-
-Нет сведений о специалистах, проводивших аннотацию: пол, возраст, страна, опыт.
+🟡 **[Information not provided]**  
+No information is available regarding who performed annotation (gender, age, country, experience, etc.)
 
 ---
 
 ### `rai:dataSocialImpact`
 
-**Потенциальная польза**:
-- Поддержка разработки контрастных агентов для МРТ;
-- Формирование эталонных наборов для изучения координационной химии;
-- Повышение точности автоматических систем извлечения данных.
+**Potential benefits**:
+- Supports development of MRI contrast agents;  
+- Enables the creation of benchmark datasets for coordination chemistry research;  
+- Improves accuracy of automated data extraction systems.
 
-🟡 Возможные риски использования (например, принятие недостаточно обоснованных решений на медико-химической основе) **не указаны** → **[Частично предоставлено]**
+🟡 Potential risks (e.g., misuse in medical decision-making without sufficient validation) **not addressed** → **[Partially provided]**
 
 ---
 
-## ➕ **Дополнительные метаданные**
+## ➕ **Additional Metadata**
 
 ---
 
 ### `keywords`
 
-хелатные комплексы, стабильность, lgK, металлоорганическая химия, SMILES, лиганд, контрастные агенты, Gd, Ga, Tc, Lu  
-☑️ Составлено по описанию
+chelate complexes, stability, lgK, organometallic chemistry, SMILES, ligand, contrast agents, Gd, Ga, Tc, Lu  
+☑️ Derived from dataset description
 
 ---
 
 ### `creator`
 
-🟡 **[Информация не предоставлена]**
-
-Нет сведений о команде или авторах извлечения данных
+🟡 **[Information not provided]**  
+No information about the data extraction team or authors
 
 ---
 
 ### `citation`
 
-🟡 **[Информация не предоставлена]**
-
-Не указано, как следует цитировать использование датасета
+🟡 **[Information not provided]**  
+No guidance on how to cite usage of the dataset
 
 ---
 
 ### `semanticTypes`
 
-☑️ По целевой области:
-- Координационные соединения  
-- Термодинамика  
-- Предсказание свойств веществ  
-- Структурная химия  
-- Машинное обучение в химии данных
+☑️ Based on domain scope:
+- Coordination compounds  
+- Thermodynamics  
+- Property prediction  
+- Structural chemistry  
+- Machine learning in chemistry
 
 ---
 
 ### `preProcessing`
 
-☑️ Структуры были переведены в **канонический SMILES-формат**  
-☑️ **Стереохимия удалена вручную**  
-☑️ Использовались правила фильтрации по типу структуры (исключены неполные лигандные формулы, полиамиды, аминокислоты и т.п.)  
-☑️ Проведено 212 корректировок, преимущественно по шаблонам (190) и частично — вручную (22)
+☑️ Molecules were converted into **canonical SMILES format**  
+☑️ **Stereochemistry was manually removed**  
+☑️ Structural filtering rules were applied (e.g., incomplete ligands, polyamides, amino acids excluded)  
+☑️ 212 corrections in total: 190 template-based and 22 manual/focused
 
-🟡 Подробности NLP- или таблиц-ориентированной предобработки **не представлены**
+🟡 No detailed description of NLP- or table-based preprocessing → **[Partially provided]**
 
 ---
 
 ### `purpose`
 
-- Построение моделей оценки стабильности внутриядерных и MRI-релевантных комплексов  
-- Изучение взаимодействий металлов с макроциклическими и полидентатными лигандами  
-- Тестирование методов автоматического извлечения данных по координационным соединениям
+- Modeling stability of nuclear and MRI-relevant complexes  
+- Studying interactions between metals and macrocyclic/polydentate ligands  
+- Testing methods for automated data extraction in coordination chemistry
 
-☑️ Прямо указано в *Dataset Description*
+☑️ Clearly stated in *Dataset Description*
 
-🟡 Не описано, где использование не рекомендуется → **[Частично предоставлено]**
+🟡 No information on non-recommended use cases → **[Partially provided]**
 
 ---
 
-## 🧩 **Аннотационные поля Responsible AI**
+## 🧩 **Responsible AI Annotation Fields**
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
-
-Никаких упоминаний о квалификации, составе или принадлежности аннотаторов
+🟡 **[Information not provided]**  
+No details on annotator qualifications, team composition, or affiliations
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-☑️ Всего проведено 212 исправлений:  
-- 190 по шаблону (фигурные обозначения, SMILES ошибки);  
-- 22 частные — расхождения между номерами соединений и схемами.  
-☑️ Ошибки возникали чаще всего в `compound_id`, `compound_name`, `SMILES`.
+☑️ A total of 212 corrections were made:  
+- 190 template-based (e.g., bracket notation, SMILES formatting);  
+- 22 custom cases such as mismatches between compound numbers and figure references.  
+☑️ Most frequent errors occurred in `compound_id`, `compound_name`, and `SMILES`.
 
-🟡 Нет данных о процессе согласования или многократной проверке аннотаций → **[Частично предоставлено]**
+🟡 No data on agreement protocols or multilayer annotation review → **[Partially provided]**
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-🟡 **[Информация не предоставлена]**
-
-Платформа или инструменты аннотации не указаны (Google Sheets, Prodigy, др.)
+🟡 **[Information not provided]**  
+No mention of tools or platforms used for annotation (e.g., Google Sheets, Prodigy, others)
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-☑️ Указано, что извлекались только полные и корректно определённые структуры  
-☑️ Применялись строгие фильтры: исключались короткие структуры, радикалы и прекурсоры  
-🟡 Нет подробного описания этапов аннотации — сколько людей, как инструкции оформлялись → **[Частично предоставлено]**
+☑️ It is stated that only complete and well-defined structures were extracted  
+☑️ Strict filtering was applied: short structures, radicals, and precursors excluded  
+🟡 No details on annotation steps, number of contributors, or documentation of annotation rules → **[Partially provided]**
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-🟡 **[Информация не предоставлена]**
-
-Не указано, использовались ли автоматические извлекатели или библиотеки (например, RDKit, NLP-модели)
+🟡 **[Information not provided]**  
+No indication whether automated tools were used (e.g., RDKit, NLP models)
 
 ---
 
-## ⚙ **Сбор и подготовка данных**
+## ⚙ **Data Collection and Processing**
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Некоторые значения могут отсутствовать (structure, page id и др.);  
-☑️ Пропущенные значения удалялись на этапе фильтрации, либо явно не включались в итоговый датасет.
+☑️ Some values may be missing (e.g., structure, page ID)  
+☑️ Missing entries were either filtered out or excluded prior to final dataset assembly
 
-🟡 Метод обработки пропущенных значений не описан отдельно → **[Частично предоставлено]**
+🟡 The method of handling missing values is not described separately → **[Partially provided]**
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-🟡 **[Информация не предоставлена]**
-
-Указано наличие PDF-файлов, но не ясно, доступны ли исходники пользователям
+🟡 **[Information not provided]**  
+PDFs are referenced, but it is unclear whether source files are accessible to users
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Ручное извлечение данных из статей и дополнительных материалов с последующей проверкой и фильтрацией
+☑️ Manual extraction from scientific articles and supplementary materials, followed by validation and filtering
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-☑️ Очистка и фильтрация данных по следующим правилам:
-- Исключение неполных или неоднозначных структур  
-- Фильтрация коротких соединений  
-- Устранение несоответствий между обозначениями соединений и координатами в фигурах  
+☑️ Data cleaning and filtering procedures included:  
+- Removal of incomplete or ambiguous structures  
+- Filtering out short compounds  
+- Resolving inconsistencies between compound identifiers and figure references  
 
-☑️ Реализовано путём 212 исправлений
+☑️ Implemented through 212 corrections
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-🟡 **[Информация не предоставлена]**
-
-Методы импьютации/заполнения пропусков не описаны
+🟡 **[Information not provided]**  
+No indication of whether imputation or value-filling techniques were used
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-☑️ Удаление стереохимии  
-☑️ Приведение к каноническим SMILES  
-🟡 Нет сведений об NLP предобработке, разбивке, нормализации текста → **[Частично предоставлено]**
+☑️ Stereochemistry was removed  
+☑️ Structures normalized to canonical SMILES  
+🟡 No information on NLP preprocessing, segmentation, or text normalization → **[Partially provided]**
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 **[Информация не предоставлена]**
-
-Не указано, кто будет поддерживать датасет или планируются ли обновления
+🟡 **[Information not provided]**  
+No information provided regarding dataset updates or maintenance responsibilities
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Рекомендовано:
-- Моделирование стабильности хелатных комплексов  
-- Изучение данных для МРТ-контрастных агентов  
-- Тестирование алгоритмов извлечения данных по химии комплексов  
+☑️ Recommended for:
+- Modeling thermodynamic stability of chelate complexes  
+- Research related to MRI contrast agents  
+- Evaluation of chemical data extraction algorithms
 
-🟡 Не указано, где **не** следует использовать → **[Частично предоставлено]**
+🟡 No information on use cases where the dataset should **not** be applied → **[Partially provided]**
 
 ---
