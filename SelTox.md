@@ -1,243 +1,243 @@
 
-# 🧪 Датасет: **SelTox – Toxicity of Inorganic Nanoparticles on Bacteria**
+
+# 🧪 Dataset: **SelTox – Toxicity of Inorganic Nanoparticles on Bacteria**
 
 ---
 
-## 🔷 Основные RAI-поля
+## 🔷 Core RAI Fields
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были извлечены из научных публикаций в формате PDF. Использовались как основные статьи, так и дополнительные материалы. Автоматическое извлечение сопровождалось ручной проверкой. Указано наличие автоматической валидации записей.  
-☑️ Подтверждено в разделе *Original Data*, *Metadata* и *Validation Results*.
+The data was extracted from scientific publications in PDF format. Both main articles and supplementary materials were used. Automatic extraction was followed by manual verification. Automatic record validation is indicated.  
+☑️ Confirmed in the *Original Data*, *Metadata*, and *Validation Results* sections.
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные искажения связаны с:
-- Перекосом в сторону определённых типов наночастиц (например, популярные и наиболее исследованные соединения);
-- Неравномерным покрытием различных бактериальных штаммов;
-- Преобладанием данных с положительными результатами, поскольку источником являются опубликованные статьи;
-- Отсутствием информации для отдельных параметров (например, zeta-потенциал).
+Potential biases are associated with:
+- Skew toward certain types of nanoparticles (e.g., popular or commonly studied compounds);  
+- Uneven coverage of various bacterial strains;  
+- A predominance of positive results, since the source is published articles;  
+- Missing information for certain parameters (e.g., zeta potential).
 
-🟡 [Информация о действиях по устранению искажений не предоставлена]
+🟡 [No information provided on actions taken to mitigate biases]
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-Датасет не содержит персональных данных. В нём представлены обезличенные экспериментальные результаты in vitro-исследований действия наночастиц на бактериальные культуры.  
-☑️ Подтверждено логикой содержимого и отсутствие человекоориентированных данных.
+The dataset contains no personal data. It presents anonymized experimental results from in vitro studies on the effects of nanoparticles on bacterial cultures.  
+☑️ Confirmed by the nature of the content and the absence of human-centered data.
 
 ---
 
 ### `rai:dataLimitations`
 
-- Данные относятся только к in vitro-анализу и не отражают in vivo-эффекты;  
-- Не охватываются все возможные штаммы бактерий;  
-- Возможно неполное единообразие методик из разных публикаций;  
-- Некоторые значения отсутствуют (например, zeta-потенциал или штамм).
+- The data relates only to in vitro analysis and does not reflect in vivo effects;  
+- Not all possible bacterial strains are covered;  
+- Methods from different publications may be partially inconsistent;  
+- Some values are missing (e.g., zeta potential or strain information).
 
-☑️ Подтверждено в *Dataset Description* и *Key Notes*
+☑️ Confirmed in the *Dataset Description* and *Key Notes*
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет данных о том, кто занимался валидацией и аннотированием (опыт, пол, страна, родной язык и т.д.)
+No information is available on who conducted validation and annotation (experience, gender, country, native language, etc.)
 
 ---
 
 ### `rai:dataSocialImpact`
 
-**Положительное влияние**:
-- Поддержка исследований причины и характера устойчивости бактерий к неорганическим наноматериалам;
-- Потенциальный вклад в разработку антимикробных решений против лекарственно-устойчивых штаммов.
+**Positive impacts**:
+- Supporting research into the causes and nature of bacterial resistance to inorganic nanomaterials;  
+- Potential contribution to the development of antimicrobial solutions against drug-resistant strains.
 
-**Риски**:
-- Возможное использование вне научного или клинически проверенного контекста;
-- Применение моделей, обученных на этих данных, без учёта реальных медицинских сценариев.
+**Risks**:
+- Potential use outside of a scientific or clinically validated context;  
+- Application of models trained on this data without considering real-world medical scenarios.
 
-☑️ Подтверждено в *Dataset Description*
+☑️ Confirmed in the *Dataset Description*
 
 ---
 
-## ➕ Дополнительные метаданные
+## ➕ Additional Metadata
 
 ---
 
 ### `keywords`
 
-наноматериалы, антимикробная активность, устойчивость к антибиотикам, in vitro, многорезистентные бактерии, MIC, ZOI, токсичность
+nanomaterials, antimicrobial activity, antibiotic resistance, in vitro, multidrug-resistant bacteria, MIC, ZOI, toxicity
 
-☑️ Вывод на основе описания и содержимого датасета
+☑️ Derived from the dataset description and content
 
 ---
 
 ### `creator`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Название команды или организации прямо не указано в предоставленной информации.
+The name of the team or organization is not explicitly mentioned in the provided information.
 
 ---
 
 ### `citation`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Форма цитирования не указана. Упоминание публикации отсутствует.
+Citation format is not indicated. No mention of a publication.
 
 ---
 
 ### `semanticTypes`
 
-☑️ На основе предназначения датасета:
-- Извлечение химико-биологических сущностей  
-- Предсказание антимикробных свойств  
-- Обработка и анализ таблиц  
-- Нанотоксикология  
-- Информационное извлечение из научных публикаций
+☑️ Based on the intended use of the dataset:
+- Extraction of chemical-biological entities  
+- Antimicrobial activity prediction  
+- Processing and analysis of tabular data  
+- Nanotoxicology  
+- Information extraction from scientific publications
 
 ---
 
 ### `preProcessing`
 
-☑️ Указано:  
-- 51 исправление, включая 48 по шаблону  
-- Основные полями ошибок были: `np_synthesis`, `strain`, `bacteria`  
-Использованы правила для исправлений терминологических различий.
+☑️ Stated:  
+- 51 corrections, including 48 template-based;  
+- Main fields with errors: `np_synthesis`, `strain`, `bacteria`  
+Rule-based approaches were used for correcting terminological inconsistencies.
 
-🟡 [Нет данных о других шагах предобработки — лемматизация, нормализация регистра и т.п.]
+🟡 [No information about other preprocessing steps — lemmatization, lowercasing, etc.]
 
 ---
 
 ### `purpose`
 
-Датасет предназначен для:  
-- Исследования связи между свойствами наночастиц и их антимикробной активностью  
-- Построения моделей предсказания активности против MDR-бактерий  
-- Задач извлечения структурированной информации из публикаций
+The dataset is intended for:  
+- Studying the relationship between properties of nanoparticles and their antimicrobial activity  
+- Building models to predict activity against MDR bacteria  
+- Structured information extraction tasks from publications
 
-☑️ Подтверждено в *Dataset Description*
+☑️ Confirmed in the *Dataset Description*
 
 ---
 
-## 📦 Поля, связанные с аннотацией
+## 📦 Fields Related to Annotation
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**  
-Нет сведений об аннотаторах (кто они, опыт, пол, страна и т.д.)
+🟡 **[Information not provided]**  
+No information on annotators (who they are, experience, gender, country, etc.)
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-☑️ Проведено 51 исправление, из них 48 шаблонных и 3 единичных.  
-Ошибки касались написания названий методов, штаммов и наночастиц.
+☑️ 51 corrections were made, 48 of them template-based and 3 unique cases.  
+Mistakes included errors in method names, strains, and nanoparticle names.
 
-☑️ Проблемы устранялись с помощью правил (rule-based updates).  
-🟡 [Нет сведений о спорах между аннотаторами или согласовании разметки]
+☑️ Problems were resolved using rule-based updates.  
+🟡 [No information on disagreements between annotators or annotation alignment procedures]
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-🟡 **[Информация не предоставлена]**  
-Нет упоминания о платформе или среде разметки (например, Excel, Prodigy, внутренняя платформа и т.д.)
+🟡 **[Information not provided]**  
+No mention of annotation platforms or tools (e.g., Excel, Prodigy, internal platform, etc.)
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-☑️ Указано, что применялась проверка данных по оригинальным статьям в PDF.  
-🟡 [Нет информации о количестве аннотаторов, инструкциях, задачах, процессе верификации и т.д.]
+☑️ It is stated that data were checked against the original PDF articles.  
+🟡 [No information on number of annotators, guidelines, tasks involved, or verification process]
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-🟡 **[Информация не предоставлена]**  
-Нет сведений об использовании автоматических инструментов (NER-модели, OCR и т.п.)
+🟡 **[Information not provided]**  
+No mention of automated tools used (e.g., NER models, OCR, etc.)
 
 ---
 
-## ⚙ Поля, связанные со сбором и обработкой
+## ⚙ Fields Related to Collection and Processing
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Указано, что поля вроде `strain`, `zeta_potential`, `hydrodynamic_diameter` могут оставаться пустыми, если сведения не были указаны в статье  
-🟡 [Метод обработки пропусков не описан]
+☑️ It is stated that fields like `strain`, `zeta_potential`, and `hydrodynamic_diameter` may remain blank if not reported in the article  
+🟡 [No description of how missing data was handled]
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-☑️ Имеется колонка `pdf`, указывающая на исходные файлы статей  
-🟡 [Нет информации о том, где хранятся, доступны ли и доступны ли необработанные (raw) данные]
+☑️ A `pdf` column exists, pointing to the original article files  
+🟡 [No information on whether raw data is stored or accessible]
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Сбор данных производился из публикаций в PDF и их приложений  
-Можно охарактеризовать как:  
-**Ручная проверка после автоматического извлечения** (с учётом автоматической валидации)
+☑️ Data was collected from PDF articles and their supplements  
+Can be described as:  
+**Manual verification following automatic extraction** (including automatic validation)
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-☑️ Частичное подтверждение:  
-- Исправления по шаблону в нескольких колонках, таких как `np_synthesis`, `strain`, `bacteria`  
-🟡 [Дополнительные преобразования не указаны]
+☑️ Partially confirmed:  
+- Template-based corrections in several columns like `np_synthesis`, `strain`, `bacteria`  
+🟡 [Additional transformations not described]
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет информации о том, использовалась ли импьютация (заполнение пропущенных значений) или пропуски оставлены.
+No information on whether imputation (filling of missing values) was applied or if they were left blank.
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-☑️ Указано о нормализации терминов, шаблонных исправлениях на уровне столбцов.  
-🟡 [Другие этапы (лемматизация, токенизация, преобразование текста) не описаны]
+☑️ Terminology normalization and template corrections at the column level are mentioned.  
+🟡 [Other steps (lemmatization, tokenization, text normalization) are not described]
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 **[Информация не предоставлена]**  
-Нет сведений о том, поддерживается ли датасет или будет ли обновляться
+🟡 **[Information not provided]**  
+No information on whether the dataset is maintained or planned to be updated
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Подходит для:
-- Исследования антимикробной активности наночастиц  
-- Задач машинного обучения на in vitro-данных  
-- Сравнительного анализа эффективности против MDR-бактерий
+☑️ Suitable for:
+- Research on antimicrobial activity of nanoparticles  
+- Machine learning tasks on in vitro data  
+- Comparative analysis of effectiveness against MDR bacteria
 
-🟡 Не рекомендовано:
-- Для клинического применения или вывода in vivo-эффектов
+🟡 Not recommended for:
+- Clinical applications or inferences of in vivo effects
 
 ---
 
-## ✅ Заключение
 
-Все поля сформированы **только на основе предоставленной информации**.  
-Добавлена метка **[Информация не предоставлена]** в каждый случай, где данные отсутствовали.
+
+---
