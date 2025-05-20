@@ -1,239 +1,237 @@
 
+# 🧪 Dataset: **Eye Drops – Corneal Permeability of Small Molecules**
 
 ---
 
-# 🧪 Датасет: **Eye Drops – Corneal Permeability of Small Molecules**
-
----
-
-## 🔷 **Основные поля Responsible AI (RAI)**
+## 🔷 **Core Responsible AI (RAI) Fields**
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были извлечены из научных публикаций. Структуры соединений (`SMILES`) были нарисованы вручную на основе указанных в статьях названий веществ и таблиц. Значения проницаемости роговицы (`perm`) и её логарифмы (`logP`) либо извлекались напрямую, либо вычислялись на основе имеющихся параметров. Дополнительно были собраны метаданные для отслеживания источников (DOI, PMID, страницы, таблицы).  
-☑️ Подтверждено в *Dataset Description* и *Key Notes*
+Data was extracted from scientific publications. Molecular structures (`SMILES`) were manually drawn based on compound names and tables provided in the articles. Corneal permeability values (`perm`) and their logarithmic counterparts (`logP`) were either directly extracted or calculated based on available parameters. Additional metadata was collected to trace sources (DOI, PMID, page numbers, tables).  
+☑️ Confirmed in *Dataset Description* and *Key Notes*
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные смещения в данных:
-- Использованы только опубликованные соединения с известными значениями проницаемости (положительный байас);  
-- SMILES создавались вручную — риск субъективной интерпретации структур;  
-- Только соединения с известным фармацевтическим применением (ограниченный класс молекул).  
+Potential sources of bias:
+- Only published compounds with known permeability values were used (positive result bias);  
+- SMILES were manually created — potential subjective interpretation of structures;  
+- Only molecules with known pharmaceutical applications were included (limited chemical class coverage).
 
-🟡 `[Информация о предпринятых мерах по снижению этих смещений не предоставлена]`
+🟡 **[No information provided on efforts to reduce or address these biases]**
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-Датасет не содержит персональных или чувствительных данных. Включает только химические структуры, численные значения и библиографическую информацию.  
-☑️ Полностью подтверждается содержанием полей.
+The dataset contains no personal or sensitive data. It includes only chemical structures, numerical values, and bibliographic source information.  
+☑️ Fully confirmed by the dataset fields.
 
 ---
 
 ### `rai:dataLimitations`
 
-- SMILES-структуры не были автоматически извлечены — они нарисованы вручную на основе названий, что может вызвать неточности;  
-- Некоторые значения (`perm`, `logP`) были вычислены, если не указаны напрямую — могут содержать погрешности;  
-- Перечень соединений ограничен размерами набора (163 штуки) и сферой применения (офтальмология).  
+- SMILES structures were not automatically extracted — they were drawn manually from compound names, which may lead to inaccuracies;  
+- Some `perm` and `logP` values were computed rather than directly extracted — may contain calculation errors;  
+- The compound list is limited to 163 entries and focused exclusively on ophthalmic use cases.
 
-☑️ Указано в *Dataset Description* и *Key Notes*
+☑️ Stated in *Dataset Description* and *Key Notes*
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 `[Информация не предоставлена]`  
-Нет данных о тех, кто вручную создавал SMILES, проводил проверку или рассчитывал параметры.
+🟡 **[Information not provided]**  
+No data on who manually created SMILES or performed value validation/calculations.
 
 ---
 
 ### `rai:dataSocialImpact`
 
-**Потенциальная польза**:
-- Содействие в разработке офтальмологических препаратов;
-- Помощь в построении предсказательных моделей для проницаемости роговицы;
-- Тестирование методов извлечения структур и свойств.
+**Potential benefits**:
+- Supports the development of ophthalmic drugs;  
+- Helps build predictive models for corneal permeability;  
+- Useful in testing extraction methods for chemical structures and properties.
 
-🟡 `[Информация о потенциальных рисках или ограничениях использования не представлена]`
+🟡 **[No information on potential risks or unintended uses is provided]**
 
 ---
 
-## ➕ **Дополнительные метаданные**
+## ➕ **Additional Metadata**
 
 ---
 
 ### `keywords`
 
-офтальмология, проницаемость роговицы, SMILES, logP, фармацевтические молекулы, офтальмологические препараты, молекулярные свойства  
-☑️ Очевидно из описания
+ophthalmology, corneal permeability, SMILES, logP, pharmaceutical molecules, eye drops, molecular properties  
+☑️ Clearly based on dataset description
 
 ---
 
 ### `creator`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Нет сведений о создателях или команде проекта
+No information available regarding the creators or team behind the project
 
 ---
 
 ### `citation`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Нет ссылки на публикацию или формат официального цитирования
+No reference or formal citation format provided
 
 ---
 
 ### `semanticTypes`
 
-☑️ На основе структуры:
-- Химическая структура соединений в формате SMILES  
-- Молекулярные свойства (проницаемость, logP)  
-- Табличные данные  
-- Фармацевтическое моделирование  
-- Ручной анализ молекул  
+☑️ Based on dataset structure:
+- Chemical compound structures (SMILES format)  
+- Molecular properties (permeability, logP)  
+- Tabular data  
+- Pharmaceutical modeling  
+- Manual curation of molecules  
 
 ---
 
 ### `preProcessing`
 
-☑️ Была выполнена ручная отрисовка и проверка структур на основе названий в статьях  
-☑️ Произведены 23 ошибки: 20 шаблонных и 3 индивидуальные  
-☑️ Основные поля: `perm (cm/s)`, `name`, `smiles`  
-🟡 `[Детали других шагов предобработки (токенизация, нормализация регистра) не предоставлены]`
+☑️ Manual sketching and verification of structures were performed based on compound names in the articles  
+☑️ 23 errors were corrected: 20 template-based and 3 unique  
+☑️ Primary fields affected: `perm (cm/s)`, `name`, `smiles`
+
+🟡 **[Details of other preprocessing steps (e.g., tokenization, case normalization) are not provided]**
 
 ---
 
 ### `purpose`
 
-Предназначен для:
-- Создания моделей для оценки проницаемости соединений через роговицу;  
-- Использования в контексте офтальмологических исследований;  
-- Сопоставления структурных свойств с биологической доступностью.
+Designed for:
+- Building models to assess compound permeability through the cornea;  
+- Use in ophthalmic research and formulation;  
+- Mapping structure–property relationships to predict biological availability.
 
-☑️ Подтверждено в *Dataset Description*
+☑️ Confirmed in *Dataset Description*
 
-🟡 `[Не указано, где применения данных не рекомендуется]`
+🟡 **[No mention of scenarios where use is not recommended]**
 
 ---
 
-## 🧩 **Аннотационные поля Responsible AI**
+## 🧩 **RAI Annotation Fields**
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Нет информации о людях, создававших SMILES и проверявших значения.
+No details about individuals who drew the SMILES or verified values
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-☑️ Было выполнено 23 исправления, большая часть (20) — повторяющиеся шаблоны.  
-Проблемы встречались в SMILES, названии соединения и значениях проницаемости.  
+☑️ 23 corrections were made; most (20) were recurring template issues.  
+Errors were found in SMILES strings, compound names, and permeability values.
 
-🟡 Нет указаний на споры или согласование между аннотаторами → `[Частично предоставлена информация]`
+🟡 No notes on annotator disagreements or agreement procedures → **[Partially provided]**
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Инструмент или среда, где проводилась разметка/проверка (например, ChemDraw, Google Sheets и т.д.) — не указаны
+No mention of the tool or environment used for structure creation or annotation (e.g., ChemDraw, Google Sheets)
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-☑️ SMILES рисовались вручную на основе названий в статьях  
-☑️ Значения `perm` и `logP` либо брались напрямую, либо вычислялись  
-🟡 `[Нет информации о том, сколько аннотаторов, какие были инструкции, как проверяли данные]`
+☑️ SMILES were manually drawn based on compound names from publications  
+☑️ `perm` and `logP` values were either extracted or calculated  
+🟡 No info on number of annotators, instructions, or data verification workflow
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Нет упоминаний об использовании RDKit, LLM или других автоматических инструментов
+No references to use of RDKit, LLMs, or other automated extraction tools
 
 ---
 
-## ⚙ **Поля, связанные с обработкой и качеством данных**
+## ⚙ **Fields Related to Data Quality and Processing**
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Некоторые записи содержат только одно значение (либо `perm`, либо `logP`) — второе рассчитывалось  
-☑️ Пропуски явно отмечались и обрабатывались вручную
+☑️ Some records only include one value (`perm` or `logP`) — the other was calculated  
+☑️ Missing values were manually tracked and handled
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Нет данных, доступны ли оригинальные статьи или страницы пользователям
+No details on access to original publications or document pages
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Ручное извлечение данных из опубликованных источников  
-☑️ Ручное построение структур на основе названий веществ
+☑️ Manual data extraction from published sources  
+☑️ Manual drawing of structures based on compound names
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-☑️ Коррекции входили в ручную проверку:  
-- Расхождения между названием и SMILES  
-- Ошибки в значениях проницаемости  
-🟡 `[О дополнительных трансформациях (нормализация единиц, фильтрация) информация отсутствует]`
+☑️ Manual corrections included:  
+- Discrepancies between compound name and SMILES structure  
+- Errors in permeability values
+
+🟡 No information on further transformations (e.g., unit normalization, filtering)
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Не сказано, как использовались/обрабатывались вычисленные значения
+No explanation of how calculated values were treated or validated
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-☑️ Упомянута ручная нормализация структур и расчет некоторых значений  
-🟡 `[Нет данных об автоматической или NLP-предобработке]`
+☑️ Manual standardization of structures and calculation of some properties was performed  
+🟡 **[No automated or NLP preprocessing techniques are discussed]**
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 `[Информация не предоставлена]`
+🟡 **[Information not provided]**
 
-Отсутствует описание поддержки версий или планов по обновлению датасета
+No plan mentioned for versioning, maintenance, or future updates
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Используется для:
-- Создания предсказательных моделей проницаемости  
-- QSAR-анализов в офтальмологии  
-- Тестирования моделей связывания свойства–структура  
+☑️ Suitable for:
+- Predictive modeling of corneal permeability  
+- QSAR analysis in ophthalmology  
+- Structure–property relationship model testing
 
-🟡 Где не использовать — не указано → `[Частично предоставлено]`
+🟡 Non-recommended use cases are not listed → **[Partially provided]**
 
 ---
-
