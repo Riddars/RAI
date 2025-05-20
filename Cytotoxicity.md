@@ -1,239 +1,232 @@
-Отличный вопрос — и ты абсолютно прав.
 
 
-
-
+# ✅ Corrected RAI Fields and Metadata for the **Cytotoxicity** Dataset
 
 ---
 
-# ✅ Исправленные RAI-поля и метаданные для датасета **Cytotoxicity**
-
----
-
-## 🔷 Основные RAI-поля
+## 🔷 Core RAI Fields
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были собраны из полнотекстовых статей в формате PDF и дополнительных материалов. Использовались как статьи, так и приложения. Извлечение проводилось с помощью комбинации автоматических инструментов (LLM, OCR) и ручной корректировки экспертами. Указано наличие автоматической валидации.  
-☑️ Подтверждено в разделе *Original Data* и *Dataset Description*.
+The data was collected from full-text articles in PDF format and supplementary materials. Both the articles and their appendices were used. Extraction was done using a combination of automated tools (LLM, OCR) and manual expert correction. Automatic validation is indicated.  
+☑️ Confirmed in the *Original Data* and *Dataset Description* sections.
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные искажения могут возникать из-за:
-- Неравномерного представления различных типов наночастиц;
-- Возможного преобладания широко изучаемых клеточных линий;
-- Отсутствия данных в случаях, где показатели не были измерены.
+Potential biases may arise due to:
+- Uneven representation of different types of nanoparticles;
+- Possible predominance of widely studied cell lines;
+- Missing data where no measurements were reported.
 
-☑️ Частично подтверждено в таблицах и описаниях.  
-🟡 [Не указано, предпринимались ли конкретные шаги по устранению искажений]
+☑️ Partially confirmed in tables and descriptions.  
+🟡 [No indication of specific steps taken to mitigate biases]
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-В датасете нет персональных или чувствительных данных. Используются только обезличенные экспериментальные данные из научных статей, включая данные по клеточным линиям.  
-☑️ Прямо подтверждается характером источников.
+There is no personal or sensitive information in the dataset. Only depersonalized experimental data from scientific publications is used, including data on cell lines.  
+☑️ Explicitly confirmed by the nature of the sources.
 
 ---
 
 ### `rai:dataLimitations`
 
-- Данные относятся только к **in vitro** исследованиям.  
-- Не применимы для предсказания **in vivo** эффектов или клинического использования.  
-- Возможны пропуски значений (например, zeta potential).  
-- Незначительные различия в форматах и терминах между статьями могут влиять на качество предсказательных моделей.  
+- Data is limited to **in vitro** studies only.  
+- Not applicable for predicting **in vivo** effects or for clinical use.  
+- Missing values are possible (e.g., zeta potential).  
+- Minor formatting and terminology differences across publications may affect model quality.
 
-☑️ Подтверждено описанием датасета и схемой колонок.
+☑️ Confirmed by the dataset description and column schema.
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 Информация не предоставлена.  
-Нигде в твоих описаниях не указано, кто именно выполнял разметку, их профессия, страна, возраст, родной язык или численность.  
-🔸 Уточнение: упомянуто только, что аннотация проводилась **экспертами** и с **ручной валидацией**.
+🟡 Information not provided.  
+Your descriptions do not specify who performed the annotation, their profession, country, age, native language, or count.  
+🔸 Clarification: only mentioned that annotation was performed by **experts** and included **manual validation**.
 
 ---
 
 ### `rai:dataSocialImpact`
 
-Возможные **положительные эффекты**:
-- Ускорение исследований в области нанотоксикологии;
-- Повышение репрезентативности и доступности данных.
+Possible **positive impacts**:
+- Accelerating research in nanotoxicology;
+- Increasing representativeness and accessibility of data.
 
-Возможные **риски**:
-- Некорректное использование данных вне лабораторных условий;
-- Запуск необоснованных выводов при отсутствии достаточной экспертизы.
+Possible **risks**:
+- Misuse of data outside laboratory settings;
+- Unfounded conclusions drawn without sufficient expertise.
 
-☑️ Подтверждено в разделе *Dataset Description* и *Project Motivation*.
+☑️ Confirmed in the *Dataset Description* and *Project Motivation* sections.
 
 ---
 
-## ➕ Дополнительные метаданные
+## ➕ Additional Metadata
 
 ---
 
 ### `keywords`
 
-нанотоксикология, in vitro, наноматериалы, цитотоксичность, клеточные линии, извлечение информации, машинное обучение  
-☑️ Выведены из описания задач и структуры датасета.
+nanotoxicology, in vitro, nanomaterials, cytotoxicity, cell lines, information extraction, machine learning  
+☑️ Derived from the task description and dataset structure.
 
 ---
 
 ### `creator`
 
-☑️ Указано: проектная команда ChemX  
-🟡 [Конкретные имена или учреждения не предоставлены]
+☑️ Stated: ChemX project team  
+🟡 [Specific names or institutions not provided]
 
 ---
 
 ### `citation`
 
-🟡 Цитирование не предоставлено.  
-⚠️ Указано, что статья находится *на рассмотрении*, ссылка будет позже.
+🟡 Citation not provided.  
+⚠️ It is noted that the article is *under review*, a link will be added later.
 
 ---
 
 ### `semanticTypes`
 
-☑️ Извлечение сущностей (NER);  
-☑️ Извлечение отношений;  
-☑️ Табличные данные;  
-☑️ Предсказание токсичности;  
-☑️ Научные тексты; документ-анализ
+☑️ Named Entity Recognition (NER);  
+☑️ Relation Extraction;  
+☑️ Tabular Data;  
+☑️ Toxicity Prediction;  
+☑️ Scientific Texts; Document Analysis
 
-Все типы выведены из назначения датасета и методологии.
+All types derived from the dataset objective and methodology.
 
 ---
 
 ### `preProcessing`
 
-☑️ Указано:  
-- Исправление терминологии (cell_type, test) — 1351 коррекция;  
-- Обнаружены и исправлены шаблонные ошибки.  
-🟡 Нет сведений о токенизации, нижнем регистре, лемматизации → отмечаем: [Информация не предоставлена]
+☑️ Stated:  
+- Terminology correction (cell_type, test) — 1351 corrections;  
+- Template errors identified and corrected.  
+🟡 No information on tokenization, lowercasing, lemmatization → marked as: [Information not provided]
 
 ---
 
 ### `purpose`
 
-☑️ Подходит для:
-- Обучения моделей извлечения химической информации  
-- Тестирования инструментов мультимодального анализа  
-- Изучения зависимости между характеристиками наночастиц и цитотоксичностью
+☑️ Suitable for:
+- Training chemical information extraction models  
+- Testing multimodal analysis tools  
+- Studying dependencies between nanoparticle features and cytotoxicity
 
-🟡 Не рекомендовано для:
-- Клинических или регуляторных решений  
-- Вывода in vivo характеристик
+🟡 Not recommended for:
+- Clinical or regulatory decisions  
+- Deriving in vivo characteristics
 
 ---
 
-## 📦 Поля, связанные с аннотацией
+## 📦 Fields Related to Annotation
 
 ---
 
 ### `rai:annotatorDemographics`
-🟡 Информация не предоставлена.
+🟡 Information not provided.
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-☑️ Описано: было найдено 1351 коррекция, 1350 из них — шаблонные ошибки.  
-Основные проблемы: **несоответствие названий клеточных линий и тестов**.  
-Исправления производились вручную на основе повторяющихся паттернов.
+☑️ Described: 1351 corrections were made, 1350 of which were template errors.  
+Key issues: **inconsistent cell line and test naming**.  
+Corrections were applied manually based on recurring patterns.
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-☑️ Явно не указано. Однако  
-🟡 [Платформа для аннотирования не указана: например, Excel, Prodigy, Google Sheets — не упомянуто]
+☑️ Not explicitly stated. However,  
+🟡 [Annotation platform not mentioned: e.g., Excel, Prodigy, Google Sheets — not indicated]
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-☑️ Упоминается ручная валидация и корректировка явных ошибок.  
-🟡 [Нет уточнений о количестве аннотаторов, инструкциях, правилах, конфликтной разметке и т.д.]
+☑️ Manual validation and correction of evident errors is mentioned.  
+🟡 [No details on number of annotators, annotation guidelines, conflict resolution, etc.]
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-🟡 В данном датасете **не указано**, какие именно инструменты использовались (например, ChemBERTa, GPT-4o и др.)
+🟡 The dataset does **not specify** which tools were used (e.g., ChemBERTa, GPT-4o, etc.)
 
 ---
 
-## ⚙ Поля, связанные со сбором и предобработкой
+## ⚙ Fields Related to Collection and Preprocessing
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Указано, что встречаются пропущенные значения (например, zeta potential).  
-Они были оставлены пустыми — **не заполнялись** и **не корректировались**.
+☑️ Stated that missing values (e.g., zeta potential) are present.  
+They were left blank — **not imputed** or **corrected**.
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-☑️ Архив PDF-ов обозначен как `pdf` в таблице.  
-🟡 [Нет информации о доступности или сохранении неструктурированных данных → помечаем как: доступ неизвестен]
+☑️ PDF archive is denoted as `pdf` in the table.  
+🟡 [No information on accessibility or preservation of unstructured data → marked as: access unknown]
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Указано: данные извлекались из статей (PDF), включали таблицы, текст, фигуры.  
-Метод неструктурирован, но можно отнести к категории: "автоматическое извлечение и ручная валидация"
+☑️ Stated: data was extracted from articles (PDF), including tables, text, and figures.  
+The method is unstructured but can be classified as: "automatic extraction and manual validation"
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-☑️ Подтверждено:  
-- исправление шаблонных ошибок (1351 случай),  
-- нормализация терминов  
-- согласование названий полей и значений  
-- форматирование/очистка
+☑️ Confirmed:  
+- correction of template errors (1351 instances),  
+- terminology normalization  
+- harmonization of field names and values  
+- formatting/cleaning
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-☑️ Отсутствующие значения не обрабатывались, были оставлены как есть.
+☑️ Missing values were not processed, left as is.
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-☑️ Были исправлены стилистические и терминологические ошибки.  
-🟡 [Нет информации о токенизации, лемматизации, нижнем регистре и т.п.]
+☑️ Stylistic and terminology errors were corrected.  
+🟡 [No info on tokenization, lemmatization, lowercasing, etc.]
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 Не предоставлено.  
-[Нет описания ответственности за сопровождение и версионность датасета]
+🟡 Not provided.  
+[No details on responsibility for dataset maintenance and versioning]
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Используется для:
-- обучения моделей химического ИИ  
-- задач извлечения информации  
-- анализа токсичности
+☑️ Used for:
+- training chemical AI models  
+- information extraction tasks  
+- toxicity analysis
 
-🟡 Не рекомендуется для:
-- клинических выводов  
-- выводов по людям или живым организмам
+🟡 Not recommended for:
+- clinical conclusions  
+- conclusions about humans or living organisms
 
 ---
-
