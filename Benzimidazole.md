@@ -1,238 +1,233 @@
 
+# 🧪 Dataset: **Benzimidazole Antibiotics – Chemical Structures and Antimicrobial Activity**
 
 ---
 
-# 🧪 Датасет: **Benzimidazole Antibiotics – Chemical Structures and Antimicrobial Activity**
-
----
-
-## 🔷 **Основные RAI-поля**
+## 🔷 **Core RAI Fields**
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были автоматически извлечены из научных статей при помощи специализированного запроса (prompt) для извлечения информации о производных бензимидазола. Извлекались структуры в формате SMILES, значения MIC/pMIC и сопутствующая информация. Источниками служили как текст, так и изображения в статьях.  
-☑️ Подтверждено в *Extraction Prompt* и *Dataset Description*
+Data was automatically extracted from scientific articles using a specialized prompt designed to retrieve information on benzimidazole derivatives. Extracted elements include SMILES structures, MIC/pMIC values, and related metadata. Both text and images in the articles served as sources.  
+☑️ Confirmed in *Extraction Prompt* and *Dataset Description*
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные искажения:
-- Данные ограничены только двумя бактериями: *S. aureus* и *E. coli*;
-- Присутствует селективность по соединениям на основе бензимидазола;
-- Также наблюдается ограниченное количество MIC/pMIC значений в зависимости от доступности информации в публикациях.
+Possible biases:
+- Data is limited to only two bacterial species: *S. aureus* and *E. coli*;  
+- Selectivity toward compounds based on the benzimidazole scaffold;  
+- Limited availability of MIC/pMIC values depending on whether the information was present in the original publications.
 
-🟡 **[Информация об устранении этих искажений не предоставлена]**
+🟡 **[No information provided on efforts to address these biases]**
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-Датасет содержит только экспериментальные химико-биологические данные, извлечённые из опубликованных научных статей. Персональные или чувствительные данные отсутствуют.  
-☑️ Подтверждено по составу датасета
+The dataset contains only experimental chemico-biological data extracted from published scientific papers. No personal or sensitive information is included.  
+☑️ Confirmed based on dataset composition
 
 ---
 
 ### `rai:dataLimitations`
 
-- В датасете присутствуют неполные или недетализированные структуры (в случае scaffold + residue);
-- Значения MIC/pMIC могут варьироваться по методике измерения, но нормализация условий не описана;
-- Данные охватывают только *S. aureus* и *E. coli* и не включают другие патогены;
-- Некоторые поля имеют значение “NOT_DETECTED” — неполнота источника.
+- Some structures in the dataset are incomplete or underspecified (e.g., scaffold + residue);  
+- MIC/pMIC values may vary based on measurement methods, and normalization of conditions is not described;  
+- Only covers *S. aureus* and *E. coli*, excluding other pathogens;  
+- Some fields are marked as “NOT_DETECTED” — reflecting incomplete source data.
 
-☑️ Уточнено в *Notes* и *Dataset Description*
+☑️ Clarified in *Notes* and *Dataset Description*
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**  
-Нет данных о том, кто выполнял аннотацию (специализация, страна, возраст, язык и др.)
+🟡 **[Information not provided]**  
+No data regarding annotators’ specialization, country, age, language, or other demographics.
 
 ---
 
 ### `rai:dataSocialImpact`
 
-**Позитивный эффект**:
-- Поддержка поиска новых противомикробных агентов;
-- Помощь в построении QSAR-моделей и изучении зависимости “структура-активность”;
-- Упрощение доступа к структурированным данным по антибиотикам.
+**Positive impact**:
+- Supports the discovery of new antimicrobial agents;  
+- Facilitates development of QSAR models and analysis of structure–activity relationships;  
+- Simplifies access to structured data on antibiotics.
 
-🟡 **[Информация о потенциальных рисках и ограничениях использования не предоставлена]**
+🟡 **[No information provided about risks or potential misuse]**
 
 ---
 
-## ➕ **Дополнительные метаданные**
+## ➕ **Additional Metadata**
 
 ---
 
 ### `keywords`
 
-бензимидазол, антибиотики, MIC, SMILES, структура-активность, противомикробная активность, QSAR, pMIC  
-☑️ Подтверждено из описания и схемы
+benzimidazole, antibiotics, MIC, SMILES, structure–activity, antimicrobial activity, QSAR, pMIC  
+☑️ Confirmed from the dataset description and schema
 
 ---
 
 ### `creator`
 
-🟡 **[Информация не предоставлена]**
-
-Авторы/организация не указаны
+🟡 **[Information not provided]**  
+No author or organization specified
 
 ---
 
 ### `citation`
 
-🟡 **[Информация не предоставлена]**
-
-Формат цитирования или ссылка на публикацию отсутствует
+🟡 **[Information not provided]**  
+No citation format or publication reference included
 
 ---
 
 ### `semanticTypes`
 
-☑️ Основано на описании и задачах:
-- Структурное представление молекул (SMILES)  
-- Свойства соединений (порог ингибирования)  
-- Извлечение информации из публикаций  
-- Антибактериальные исследования малых молекул  
-- QSAR-моделирование
+☑️ Based on the description and objectives:
+- Molecular structure representation (SMILES)  
+- Compound properties (inhibition threshold)  
+- Information extraction from articles  
+- Antibacterial studies of small molecules  
+- QSAR modeling
 
 ---
 
 ### `preProcessing`
 
-☑️ Выполнено 77 исправлений: 63 по шаблону и 14 уникальных  
-- Основные поля: `smiles`, `target_value`, `compound_id`  
-- Типичные ошибки: неполные SMILES, путаница в идентификаторах
+☑️ A total of 77 corrections were made: 63 template-based, 14 unique  
+- Key fields: `smiles`, `target_value`, `compound_id`  
+- Typical issues: incomplete SMILES, identifier mismatches
 
-🟡 Детали форматной нормализации, токенизации и т.п. не указаны → **[Частично предоставлена информация]**
+🟡 Formatting normalization, tokenization, and similar procedures are not detailed → **[Partially provided]**
 
 ---
 
 ### `purpose`
 
-Датасет предназначен для:
-- QSAR-моделирования  
-- Изучения зависимости “структура – активность”  
-- Извлечения химической информации из публикаций  
-- Исследования эффективности антибактериальных соединений  
+The dataset is intended for:
+- QSAR modeling  
+- Analysis of structure–activity relationships  
+- Chemical information extraction from academic literature  
+- Studying the efficacy of antibacterial agents
 
-☑️ Указано в *Dataset Description*
+☑️ Stated in *Dataset Description*
 
-🟡 Не указано, где использование не рекомендуется → **[Частично предоставлено]**
+🟡 No non-recommended usage stated → **[Partially provided]**
 
 ---
 
-## 🧩 **Аннотационные (RAI) поля**
+## 🧩 **Annotation (RAI) Fields**
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет сведений о людях, участвовавших в разметке/валидации
+No details about individuals involved in annotation or validation
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-☑️ 77 исправлений, из них 63 шаблонных и 14 изолированных  
-Ошибки в полях `smiles`, `target_value`, `compound_id`  
-🟡 Нет информации о согласовании между аннотаторами или проверках качества → **[Частично предоставлено]**
+☑️ 77 corrections made, including 63 template-based and 14 isolated issues  
+Errors in fields: `smiles`, `target_value`, `compound_id`  
+🟡 No information on annotation agreement or quality checks → **[Partially provided]**
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Платформа или среда аннотирования не указана
+No annotation tool or environment mentioned
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-☑️ Использовалась специализированная система со строгими правилами извлечения и маркировкой `NOT_DETECTED`  
-🟡 Информация о процессе ручной валидации, распределении задач и инструкциях — отсутствует → **[Частично предоставлено]**
+☑️ A specialized system with strict extraction rules was used, with `NOT_DETECTED` as a standard marker  
+🟡 Details about manual validation, task distribution, or guidelines are missing → **[Partially provided]**
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-☑️ Упомянуто, что использовался **специализированный extraction prompt**, настроенный на:
-- антибиотики на основе бензимидазолов  
-- бактерии *S. aureus* и *E. coli*  
-🟡 Названия инструментов/моделей не указаны → **[Частично предоставлено]**
+☑️ Mentioned that a **specialized extraction prompt** was used, focused on:
+- benzimidazole-based antibiotics  
+- *S. aureus* and *E. coli*  
+🟡 Specific names of tools or models are not disclosed → **[Partially provided]**
 
 ---
 
-## ⚙ **Поля, связанные со сбором и обработкой данных**
+## ⚙ **Fields Related to Data Collection and Processing**
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Пропуски обозначаются как `NOT_DETECTED` и присутствуют в различных полях  
-🟡 Метод обработки отсутствующих данных (удаление, заполнение и пр.) — не описан
+☑️ Missing values are marked as `NOT_DETECTED` and present across various fields  
+🟡 No description of how missing data was handled (e.g., removed, imputed)
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-🟡 **[Информация не предоставлена]**  
-Нет упоминания о доступности необработанных данных (PDF, исходные таблицы)
+🟡 **[Information not provided]**  
+No mention of access to raw data (PDFs, original tables)
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Комбинированное: автоматическое извлечение информации из научных публикаций
+☑️ Combined method: automatic extraction of information from scientific publications
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-☑️ Исправления:
-- SMILES структуры  
-- Числовые значения MIC  
-- Идентификаторы соединений  
-🟡 Другие манипуляции не описаны (фильтрация, нормализация и пр.)
+☑️ Corrections were made to:
+- SMILES structures  
+- MIC numeric values  
+- Compound identifiers  
+🟡 Additional data handling procedures are not described (e.g., filtering, normalization)
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-🟡 **[Информация не предоставлена]**  
-Нет сведений о замене/заполнении пропущенных значений, кроме маркировки `NOT_DETECTED`
+🟡 **[Information not provided]**  
+No information on imputed or substituted missing values, aside from the `NOT_DETECTED` flag
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-☑️ Записи структурированы по шаблону, присутствует стандартизированный формат строк (например, unit fields, relation symbols)  
-🟡 Технические детали (регистры, токенизация и др.) не указаны
+☑️ Entries were structured based on a pattern; standardized string formats are present (e.g., unit fields, relation symbols)  
+🟡 Technical steps (lowercasing, tokenization, etc.) are not mentioned
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указано, будет ли обновляться датасет и кто за это отвечает
+No information regarding dataset updates or maintenance responsibility
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Прямо поддерживает:
-- Моделирование противомикробной активности  
-- Извлечение и нормализацию химических свойств  
-- Валидацию моделей in silico
+☑️ Designed for:
+- Modeling antimicrobial activity  
+- Extraction and normalization of chemical properties  
+- In silico model validation
 
-🟡 Ограничения по использованию (например, не использовать без экспертной интерпретации) не указаны → **[Частично предоставлено]**
+🟡 Usage limitations (e.g., avoid use without expert interpretation) are not stated → **[Partially provided]**
 
 ---
