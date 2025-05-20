@@ -1,236 +1,233 @@
 
 
----
-
-# 🧪 Датасет: **Synergy – Toxicity of Drug, Nanoparticle, and Their Synergistic Effect on Bacterial Strains**
+# 🧪 Dataset: **Synergy – Toxicity of Drug, Nanoparticle, and Their Synergistic Effect on Bacterial Strains**
 
 ---
 
-## 🔷 **Основные RAI-поля**
+## 🔷 **Core RAI Fields**
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были собраны из научных публикаций в формате PDF. Извлечение проводилось с помощью автоматических инструментов и дополнительно проверялось вручную. Указано наличие автоматической валидации.  
-☑️ Подтверждено в *Original Data*, *Metadata*, *Note*, *Dataset Description*
+The data was collected from scientific publications in PDF format. Extraction was performed using automated tools and was further manually validated. Automatic validation is mentioned.  
+☑️ Confirmed in *Original Data*, *Metadata*, *Note*, *Dataset Description*
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные искажения:
-- Неравномерное распределение наночастиц и антибиотиков;
-- Преобладание определённых бактериальных штаммов;
-- Публикационный байас (данные из уже опубликованных статей);
-- Пропуски в ряде колонок (например, значения MIC, zeta-потенциал, покрытия и т.д.).
+Potential biases:
+- Uneven distribution of nanoparticles and antibiotics;  
+- Predominance of certain bacterial strains;  
+- Publication bias (data sourced from already published studies);  
+- Missing values in several columns (e.g., MIC, zeta potential, coating, etc.).
 
-🟡 **[Информация о попытках устранения искажений не предоставлена]**
+🟡 **[No information provided regarding bias mitigation efforts]**
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-Датасет содержит исключительно экспериментальные данные in vitro. Персональных или чувствительных данных в нём нет.  
-☑️ Подтверждено по составу таблицы данных и характеру источников.
+The dataset consists solely of in vitro experimental data. No personal or sensitive information is present.  
+☑️ Confirmed based on the data table structure and nature of sources.
 
 ---
 
 ### `rai:dataLimitations`
 
-- Данные получены в лабораторных условиях in vitro;
-- Не отражают поведение веществ in vivo;
-- Отсутствие некоторых значений (например, MIC, покрытие, зета-потенциал);
-- Возможные вариации в методиках между публикациями.
+- Data obtained under in vitro laboratory conditions;  
+- Does not reflect in vivo effects or behavior;  
+- Some values are missing (e.g., MIC, coating, zeta potential);  
+- Possible methodological variations between publications.
 
-☑️ Подтверждено в *Dataset Description* и *Notes*
+☑️ Confirmed in *Dataset Description* and *Notes*
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**  
-Нет запроса или описания аннотаторов (количество, возраст, пол, страна, язык, специализация и пр.)
+🟡 **[Information not provided]**  
+No request for or description of annotators (number, age, gender, country, native language, specialization, etc.)
 
 ---
 
 ### `rai:dataSocialImpact`
 
-**Потенциальное положительное влияние**:
-- Поддержка исследований по борьбе с антибиотикоустойчивыми бактериями;
-- Разработка комбинированных наносредств с синергетическим эффектом.
+**Potential positive impacts**:
+- Support for research combating antibiotic-resistant bacteria;  
+- Development of combination nano-based agents with synergistic effects.
 
-🟡 **[Потенциальные риски/ограничения социального использования не описаны]**
+🟡 **[Potential risks/limitations regarding social use not described]**
 
 ---
 
-## ➕ **Дополнительные метаданные**
+## ➕ **Additional Metadata**
 
 ---
 
 ### `keywords`
 
-наномедицина, антибиотики, синергия, микробиология, MIC, FIC, бактериальные штаммы, устойчивость, комбинированная терапия  
-☑️ Обосновано из описания и структуры данных
+nanomedicine, antibiotics, synergy, microbiology, MIC, FIC, bacterial strains, resistance, combination therapy  
+☑️ Justified based on data description and structure
 
 ---
 
 ### `creator`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Имя команды, института или лаборатории не указано.
+No mention of the team, institute, or lab is present.
 
 ---
 
 ### `citation`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Сведения о публикации или формате цитирования отсутствуют.
+No publication or citation format is provided.
 
 ---
 
 ### `semanticTypes`
 
-☑️ Основано на составе данных:
-- Синергетический анализ  
-- Антимикробная активность  
-- Предсказание эффективности лекарств  
-- Мультимодальные биомедицинские данные  
-- Информационное извлечение
+☑️ Based on dataset content:
+- Synergy analysis  
+- Antimicrobial activity  
+- Drug efficacy prediction  
+- Multimodal biomedical data  
+- Information extraction
 
 ---
 
 ### `preProcessing`
 
-☑️ Валидация проведена автоматически.  
-🟡 Исправления/преобразования (нормализация, обработка ошибок, workarounds) **не описаны**  
-🟡 Лемматизация, токенизация и другие NLP-процедуры **не указаны**
+☑️ Automatic validation was performed.  
+🟡 Corrections/transformations (normalization, error handling, workarounds) **are not described**  
+🟡 Lemmatization, tokenization, and other NLP procedures **are not specified**
 
 ---
 
 ### `purpose`
 
-- Исследование синергетического антимикробного эффекта NPs и антибиотиков  
-- Моделирование взаимодействий в системах drug + nanoparticle  
-- Тестирование алгоритмов выявления синергии  
-☑️ Подтверждено в *Dataset Description*
+- Research into synergistic antimicrobial effects of NPs and antibiotics  
+- Modeling interactions in drug + nanoparticle systems  
+- Testing algorithms for synergy detection  
+☑️ Confirmed in *Dataset Description*
 
-🟡 Не указан список нерекомендуемых применений → **[Частично предоставлена информация]**
+🟡 No list of non-recommended applications provided → **[Partially provided information]**
 
 ---
 
-## 🧩 **Аннотационные поля**
+## 🧩 **Annotation Fields**
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет сведений о площадке, опыте, числе аннотаторов и т.д.
+No details regarding platform, experience, number of annotators, etc.
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет упоминания об ошибках, конфликтах между аннотаторами, уровнях согласия и способах их разрешения.
+No mention of errors, annotation conflicts, agreement levels, or resolution strategies.
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указано, где и с помощью чего проводилась аннотация (Google Sheets, Excel, Label Studio и т.д.)
+The environment/platform used for annotation is not mentioned (e.g., Google Sheets, Excel, Label Studio, etc.)
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет описания пошагового протокола, инструкции, количества аннотаторов на пример и др.
+No step-by-step protocol, guidelines, number of annotators per item, or verification process is described.
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указаны инструменты/модели OCR, LLM или NER, если они применялись.
+No tools/models used for OCR, LLM, or NER (if any) are specified.
 
 ---
 
-## ⚙ **Поля, связанные с качеством и обработкой данных**
+## ⚙ **Fields Related to Data Quality and Processing**
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Указано, что в некоторых колонках значения отсутствуют (например, drug, zeta_potential, peptide_MIC).  
-Пропуски отображаются как пустые ячейки.
+☑️ It is mentioned that some columns have missing values (e.g., drug, zeta_potential, peptide_MIC).  
+Missing data appears as empty cells.
 
-🟡 Не уточняется, как с ними обращались (удаляли, заполняли и т.п.)
+🟡 It is not specified how missing values were handled (e.g., deletion, imputation)
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-☑️ Присутствует ссылка на поля `pdf`, откуда были извлечены статьи.  
-🟡 Однако не указано, где хранятся сырые данные, доступны ли они или публикуются → **[Информация не предоставлена]**
+☑️ A `pdf` field is included indicating the source articles.  
+🟡 However, it is not specified where the raw data is stored, whether it is accessible or published → **[Information not provided]**
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Указано: сбор данных из статей (PDF), через автоматическую верификацию и ручную проверку.  
-Тип — **гибридное извлечение с верификацией**
+☑️ Stated: data were collected from articles (PDF), with automatic verification and manual review.  
+Collection type — **hybrid extraction with verification**
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет сведений о нормализации, формировании единиц, обработке дубликатов и прочих трансформациях.
+No details on normalization, unit conversion, duplicate handling, or other data transformations.
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указано, проводилась ли импьютация или заполнялись ли пропущенные значения специальными стратегиями.
+No indication of whether imputation was performed or whether missing values were handled using specific strategies.
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Отсутствует описание шагов предварительной обработки до использования (стандартизация форматов, токенизация и пр.)
+No description of preprocessing steps prior to usage (format standardization, tokenization, etc.)
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указан механизм поддержки, версионирования или обновления датасета.
+No maintenance, versioning, or update mechanism is mentioned.
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Предназначен для:
-- Анализа противомикробной эффективности комбинаций лекарства и наноматериалов  
-- Выявления синергии и построения моделей
+☑️ Designed for:
+- Analysis of antimicrobial effectiveness of drug-nanomaterial combinations  
+- Identifying synergy and building predictive models
 
-🟡 Не указано, где использование **не рекомендовано** → **[Частично предоставлено]**
+🟡 No mention of where use is **not recommended** → **[Partially provided]**
 
 ---
-
