@@ -1,242 +1,242 @@
 
-# 🧪 Датасет: **Nanozymes – Catalytic Properties of Nanozyme Materials**
+# 🧪 Dataset: **Nanozymes – Catalytic Properties of Nanozyme Materials**
 
 ---
 
-## 🔷 **Основные RAI-поля**
+## 🔷 **Core RAI Fields**
 
 ---
 
 ### `rai:dataCollection`
 
-Данные были вручную извлечены из научных статей (PDF). Каждая строка в таблице соответствует **отдельному эксперименту**, а не просто статье. Извлекались параметры структуры, каталитической активности, функциональных покрытий и условий реакции.  
-☑️ Подтверждено: *Original Data*, *Dataset Description*, *Notes*
+The data was manually extracted from scientific articles (PDF). Each row in the table corresponds to a **separate experiment**, not just a publication. Extracted parameters include structural characteristics, catalytic activity, functional coatings, and reaction conditions.  
+☑️ Confirmed in: *Original Data*, *Dataset Description*, *Notes*
 
 ---
 
 ### `rai:dataBiases`
 
-Возможные искажения:
-- Повторяющиеся статьи с близкими экспериментами могут доминировать над менее представленными случаями;
-- Не все типы каталитической активности освещены равномерно;
-- Не все условия реакции (например, покрытия) задокументированы для всех записей;
-- Пропуски значений также могут создавать нерепрезентативную картину.
+Possible biases:
+- Repetitive articles with similar experiments may dominate over less represented cases;  
+- Not all types of catalytic activity are evenly covered;  
+- Some reaction conditions (e.g., surface coatings) are undocumented for certain records;  
+- Missing values may distort representativeness.
 
-🟡 **[Информация о действиях по устранению искажений не предоставлена]**
+🟡 **[No information provided on steps taken to mitigate these biases]**
 
 ---
 
 ### `rai:personalSensitiveInformation`
 
-В датасете нет персональных данных. Информация получена из экспериментов с синтетическими наноматериалами.  
-☑️ Явно подтверждается в контексте использования in vitro и публикаций.
+The dataset contains no personal data. Information was derived from experiments involving synthetic nanomaterials.  
+☑️ Clearly confirmed in the context of in vitro use and the nature of publications.
 
 ---
 
 ### `rai:dataLimitations`
 
-- Данные относятся только к лабораторным in vitro-экспериментам;  
-- Не включают биологические / клинические сценарии применения;  
-- Некоторые значения рассчитаны или были интерпретированы командой разметки, а не напрямую взяты из текста статьи (например, `syngony`);  
-- Возможны пропущенные данные по покрытиям, параметрам и концентрациям.
+- Data is limited to in vitro laboratory experiments only;  
+- Does not include biological or clinical application scenarios;  
+- Some values were calculated or interpreted by the annotation team, rather than directly taken from the article text (e.g., `syngony`);  
+- Missing data may occur for coatings, parameters, and concentrations.
 
-☑️ Подтверждено в *Validation Results*, *Notes*
+☑️ Confirmed in *Validation Results*, *Notes*
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет сведений о том, кто проводил извлечение или проверки (число, пол, опыт, страна и т.д.)
+No data is available on who performed the extraction or validation (number, gender, experience, country, etc.)
 
 ---
 
 ### `rai:dataSocialImpact`
 
-**Потенциальное позитивное применение**:
-- Ускорение разработки и оптимизации новых нанокатализаторов (nanozymes);
-- Помощь в задачах компьютерного моделирования структуры и активности;
-- Упрощение доступа к параметрам активности каталитических веществ.
+**Potential positive applications**:
+- Acceleration of development and optimization of new nanocatalysts (nanozymes);  
+- Support in computational modeling tasks related to structure and activity;  
+- Facilitates access to catalytic activity parameters.
 
-🟡 Потенциальные риски или ограничения применения не описаны → **[Частично предоставлено]**
+🟡 Potential risks or limitations of use are not described → **[Partially provided]**
 
 ---
 
-## ➕ **Дополнительные метаданные**
+## ➕ **Additional Metadata**
 
 ---
 
 ### `keywords`
 
-наноэнзимы, каталитическая активность, Michaelis-Menten, Vmax, Km, наноматериалы, биосенсоры, каталитические свойства  
-☑️ Явно отражено в описании и структуре данных
+nanozymes, catalytic activity, Michaelis–Menten, Vmax, Km, nanomaterials, biosensors, catalytic properties  
+☑️ Clearly reflected in the dataset description and structure
 
 ---
 
 ### `creator`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Название команды или лаборатории отсутствует
+No name of the team, organization, or laboratory is included.
 
 ---
 
 ### `citation`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет сведений о статье, авторстве или формате цитирования
+No publication details, author names, or citation format available.
 
 ---
 
 ### `semanticTypes`
 
-☑️ Вывод на основе состава данных:
-- Химический анализ
-- Каталитическая активность
-- Извлечение экспериментальных параметров
-- Научные таблицы
-- Моделирование структуры–функции
+☑️ Derived from the dataset contents:
+- Chemical analysis  
+- Catalytic activity  
+- Extraction of experimental parameters  
+- Scientific tables  
+- Structure-function modeling
 
 ---
 
 ### `preProcessing`
 
-☑️ Согласно *Validation Results*, проведено 439 исправлений:
-- 398 по шаблону (формулы, температура, симметрия кристаллов);
-- 41 — частные случаи.
+☑️ According to *Validation Results*, 439 corrections were implemented:
+- 398 template-based (formulas, temperature, crystal symmetry);  
+- 41 case-specific corrections.
 
-🟡 Нет информации о дополнительной NLP/ML-предобработке (токенизация, регистр, лемматизация и пр.) → **[Частично предоставлено]**
+🟡 No information on further NLP/ML preprocessing (tokenization, lowercasing, lemmatization, etc.) → **[Partially provided]**
 
 ---
 
 ### `purpose`
 
-Датасет предназначен для:
-- Бенчмаркинга свойств катализаторов;
-- Обнаружения зависимостей между структурой и активностью (структура–функция);
-- Валидации ML-моделей в химии;
-- Разработки подходов по предсказанию каталитической эффективности.
+The dataset is intended for:
+- Benchmarking catalytic properties;  
+- Discovering structure–activity dependencies (structure–function);  
+- Validating ML models in chemistry;  
+- Developing predictive approaches for catalytic efficiency.
 
-☑️ Явно указано в *Dataset Description*
+☑️ Clearly stated in *Dataset Description*
 
 ---
 
-## 🧩 **RAI-поля по аннотированию**
+## 🧩 **RAI Fields Related to Annotation**
 
 ---
 
 ### `rai:annotatorDemographics`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указано, кто выполнял аннотацию.
+No indication of who performed the annotation.
 
 ---
 
 ### `rai:dataAnnotationAnalysis`
 
-☑️ Указано проведение 439 исправлений:  
-- Ошибки в полях формулы, симметрии, температуры  
-- Частично взятые или интерпретированные значения  
-- Использованы шаблоны повторяющихся ошибок по статьям  
+☑️ 439 corrections were reported:  
+- Errors in formula fields, symmetry, temperature;  
+- Some values were partially derived or interpreted;  
+- Repetitive error patterns across articles were used to apply fixes.
 
-🟡 Конфликты между аннотаторами, метод оценки или согласие не упомянуты
+🟡 Conflicts between annotators, evaluation method, or agreement procedures are not mentioned.
 
 ---
 
 ### `rai:dataAnnotationPlatform`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указано, в каком инструменте проводилась разметка
+No mention of which tool was used for annotation.
 
 ---
 
 ### `rai:dataAnnotationProtocol`
 
-☑️ Упоминается, что данные вручную извлекались из научных публикаций  
-🟡 Шаги процесса, инструкции, количество аннотаторов, способ проверки — не описаны → **[Частично предоставлено]**
+☑️ It is mentioned that data were manually extracted from scientific publications.  
+🟡 Step-by-step procedure, annotator count, instructions, or validation methods are not described → **[Partially provided]**
 
 ---
 
 ### `rai:machineAnnotationTools`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет сведений об использовании LLM, OCR, NLP или других инструментов
+No mention of LLMs, OCR, NLP, or other tools being used.
 
 ---
 
-## ⚙ **Поля по обработке/качеству данных**
+## ⚙ **Fields Related to Data Processing and Quality**
 
 ---
 
 ### `rai:dataCollectionMissingData`
 
-☑️ Указано, что пропуски присутствуют там, где что-то не указано в статье (например, покрытия, значения Km и т.д.)
+☑️ It is stated that missing values occur when information was not mentioned in the article (e.g., coating, Km values, etc.)
 
-🟡 Обработка этих пропущенных значений (удаление, замену и пр.) не описана → **[Частично предоставлено]**
+🟡 Treatment of missing data (removal, imputation, etc.) is not described → **[Partially provided]**
 
 ---
 
 ### `rai:dataCollectionRawData`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Нет указания, доступны ли исходные PDF-ы, кроме поля `pdf` в самой таблице
+No indication whether original PDFs are available, beyond the `pdf` field in the table.
 
 ---
 
 ### `rai:dataCollectionType`
 
-☑️ Явно указано, что данные вручную извлекались из публикаций  
-Тип: **ручной сбор из открытых источников**
+☑️ It is explicitly stated that data were manually extracted from publications.  
+Type: **manual collection from open sources**
 
 ---
 
 ### `rai:dataDataManipulationProtocol`
 
-☑️ Проведены:
-- Ручные корректировки шаблонных и частных ошибок
-- Исправлены поля симметрии, формулы и единицы
+☑️ The following were performed:
+- Manual correction of both template and case-specific errors;  
+- Fixes applied to symmetry, formulas, and units.
 
-🟡 Другие возможные шаги (объединение дубликатов, фильтрация) — не описаны
+🟡 Other possible steps (e.g., duplicate merging, filtering) are not described.
 
 ---
 
 ### `rai:dataImputationProtocol`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не дано сведений о том, как обрабатывались пропущенные значения
+No information on how missing values were handled.
 
 ---
 
 ### `rai:dataPreprocessingProtocol`
 
-☑️ Обработка включала исправление неконсистентных значений по шаблонам
+☑️ Included correction of inconsistent values using error pattern templates.
 
-🟡 Нет информации о форматировании текста, нормализации до нижнего регистра, токенизации и пр.
+🟡 No details on text formatting, lowercasing, tokenization, etc.
 
 ---
 
 ### `rai:dataReleaseMaintenancePlan`
 
-🟡 **[Информация не предоставлена]**
+🟡 **[Information not provided]**
 
-Не указано, будет ли датасет обновляться и кто за это отвечает
+No mention of who maintains or updates the dataset.
 
 ---
 
 ### `rai:dataUseCases`
 
-☑️ Подходит для:
-- Исследований по structure–activity relationship  
-- Машинного обучения в катализе  
-- Бенчмаркинга производительности nanozyme
+☑️ Suitable for:
+- Structure–activity relationship (SAR) research;  
+- Machine learning in catalysis;  
+- Performance benchmarking for nanozymes.
 
-🟡 Не указано, где не стоит использовать (например, в клинических задачах) → **[Частично предоставлено]**
+🟡 No mention of where use is **not recommended** (e.g., clinical settings) → **[Partially provided]**
 
 ---
